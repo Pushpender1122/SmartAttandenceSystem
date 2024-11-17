@@ -40,7 +40,7 @@ def log_attendance(image_id):
     print(f"Attendance recorded for ID: {image_id}")
 
     # Send the data to Node.js
-    url = "http://localhost:3000/add"  # Replace with your Node.js API endpoint
+    url = "https://smartattandencesystem.onrender.com/add"  # Replace with your Node.js API endpoint
     payload = {"image_id": image_id, "date": current_date, "status": "Present"}
     try:
         response = requests.post(url, json=payload)
